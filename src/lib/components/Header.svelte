@@ -3,7 +3,8 @@
 </script>
 
 <header>
-    <a href="/wish-calc">Wish Calculator</a>
+    <a href="/convert">Convert</a>
+    <!-- <a href="/wish-calc">Wish Calculator</a> -->
     <a href="/" id="logo"><img src="{logo}" alt="logo"></a>
     <a href="/dmg-calc">Dmg Calculator</a>
 </header>
@@ -11,7 +12,7 @@
 <style>
     header {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         height: 70px;
         padding: 5px 10%;
@@ -20,6 +21,7 @@
     }
 
     header > a {
+        width: 15%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -29,6 +31,7 @@
         height: 70%;
         padding: 0 2%;
         border-radius: 5px;
+        margin: 0 1%;
     }
     
     header > a:hover {
@@ -37,7 +40,8 @@
 
     #logo {
         all: unset;
-        height: 100%;
+        position: relative;
+        height: 50px;
         cursor: pointer;
     }
 
