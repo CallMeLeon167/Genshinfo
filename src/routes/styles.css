@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+:root {
+    font-size: 20px;
+    --text-color: white;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+    background-color: rgb(20,25,30);
+    background: linear-gradient(rgb(20,25,30), rgb(25,30,45));
+    background-repeat: no-repeat;
+    color: var(--text-color);
+    font-family: monospace;
+}
