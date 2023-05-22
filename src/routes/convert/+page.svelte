@@ -5,15 +5,23 @@
 <script>
     let primogems;
     let fates;
-    $: fates = primogems / 160;
 
-    function handleInput(event) {
+    function handlePrimogems(event) {
         if (event.target.value < 0) {
             event.target.value = 0;
         }
-
         primogems = event.target.value;
+        fates = primogems / 160;
     }
+
+    function handleFates(event) {
+        if (event.target.value < 0) {
+            event.target.value = 0;
+        }
+        fates = event.target.value;
+        primogems = fates * 160;
+    }
+
 </script>
 
 <main>
@@ -21,12 +29,12 @@
     <form on:submit|preventDefault>
         <div>
             <label for="primogems">Primogems</label>
-            <input type="number" id="primogems" min="0" placeholder="160" bind:value={primogems} on:input={handleInput}>
+            <input type="number" id="primogems" min="0" placeholder="160" bind:value={primogems} on:input={handlePrimogems}>
         </div>
         <span>=</span>
         <div>
             <label for="fates">Fates</label>
-            <input type="number" id="Fates" min="0" placeholder="1" bind:value={fates} disabled>
+            <input type="number" id="Fates" min="0" placeholder="1" bind:value={fates} on:input={handleFates}>
         </div>
     </form>
 </main>
